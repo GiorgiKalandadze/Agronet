@@ -1,0 +1,68 @@
+body{
+	margin: 0px;
+	padding: 0px;
+}
+.farmers-container {
+background-color: lightgrey;
+}
+.search-container{
+	padding-top: 10px;
+	margin: 15px;
+}
+#farmers-search{
+	font-size: 15px;
+}
+#farmer-search-button{
+	background-color: #637a94;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+.avatarList {
+	padding: 5px;
+	display:flex;
+	justify-content: flex-start;
+	
+	flex-wrap: wrap;
+}
+
+.info {
+	background-color: white;
+	width: 300px;
+	text-align: center;
+	margin: 10px;
+
+	cursor: pointer;
+}
+
+.listAvatar {
+	height: 200px;
+	width:100%;
+
+}
+
+h4 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	color : black;
+}
+
+.info:hover {
+	transform: scale(1.05);
+}
+
+
+.input-row {
+	width: 100%;
+	
+	display:flex;
+	justify-content: flex-start;
+}
+
+
+.inp {
+	width: 100%;
+
+	display: none;
+}
+
