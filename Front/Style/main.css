@@ -25,9 +25,10 @@ body{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	
 	width: 550px;
 	height: 100px;
+	margin-bottom: 5px;
+	border: 1px solid red;
 }
 .vip-slide{
 	background-color: #f1f1f1;
@@ -114,6 +115,7 @@ hr{
 	align-self: flex-end;
 	right: 20px;
 	margin-left: auto;
+
 }
 .postImg{
 	margin: auto;
@@ -131,17 +133,24 @@ hr{
 	background-color: #57707d;
 	border:none;
 	white-space: nowrap;
-	color:white;
+	color:white !important;
+	font-size: 15px;
 	width: 90px;
 	height: 35px;
 	cursor: pointer;
 	outline: 0px;
+	margin-right:4px;
+}
+.post-button-text{
+	font-size: 15px;
 }
 
 .postButton:hover{
 	background-color: lightgrey;
 }
-.fas{
+.fa-thumbs-up, .fa-bookmark{
+	font-size: 15px;
+	color: white !important;
 	margin-right: 3px;
 }
 

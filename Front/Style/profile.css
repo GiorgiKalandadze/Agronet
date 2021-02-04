@@ -25,7 +25,9 @@ body{
 	display: flex;
 	flex-direction: column;
 }
-
+#profile-left-img{
+	width: 100%;
+}
 #right-box{
 	width: 75%;
 	display: flex;
@@ -89,10 +91,10 @@ body{
 	background-color: #F7882F;
 	opacity: 0.9;
 }
-.fas{
+/*.fas{
 	color:#637a94;
 	margin-right: 5px;
-}
+}*/
 
 hr{
 	margin-right:10px;

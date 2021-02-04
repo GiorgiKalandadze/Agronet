@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 }
+
 body{
 	padding: 0px;
 	margin: 0px;
@@ -45,6 +46,20 @@ body{
 }
 
 
+#go-up{
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	bottom: 5px;
+	right: 5px;
+	background-color: red;
+	border-radius: 5px;
+	outline: none;
+	text-decoration: none;
+	padding-left:12px;
+	padding-top: 12px;
+	color: white;
+}
 /*Mid */
 .mid-container{
 	margin: auto;
