@@ -1,0 +1,174 @@
+body{
+	padding: 0px;
+	margin: 0px;
+}
+.trade-cont {
+	margin-top: 10px;
+	display: flex;
+	justify-content: flex-start;
+	background-color: white;
+}
+.trade-left{	
+	/*width: 200px;*/
+	width: 20%;
+	height: 500px;
+	margin-right: 40px;
+	background-color: #637a94;
+	display: flex;
+	flex-direction: column;
+	padding: 3px;
+	
+}
+.filter-box{
+	padding: 5px;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+.filter-checkboxes{
+	list-style-type: none;
+	padding: 0px;
+}
+.trade-category-button{
+	background-color: white;
+	border: none;
+	color: red;
+	outline: none;
+	cursor: pointer;
+	text-align: left;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 15px;
+	padding: 10px;
+	margin: 5px;
+	margin-left: 0px;
+}
+#price-inp{
+	margin-bottom: 5px;
+}
+.price-border-label{
+	margin: 2px;
+	margin-left: 0px;
+}
+#set-trade-price{
+	margin: 5px;
+	margin-left: 0px;
+	background-color: #F7882F;
+	cursor: pointer;
+	border:none;
+	outline: none;
+	padding: 5px;
+	font-size: 15px;
+}
+.trade-hr{
+	margin: 0px;
+}
+
+.trade-right{
+	/*width: 1000px;*/
+	width: 75%;
+	display: flex;
+	align-items: space-around;
+	flex-direction: column;
+	background-color:  #637a94;
+
+}
+.trade-list {
+	overflow-y: scroll;
+	height: 680px;
+	background-color:  #637a94;
+	width: 1000px;
+	padding:10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: flex-start;
+	
+}
+.trade-item {
+	width: 300px;
+	height: 320px;
+	margin: 5px;
+	margin-bottom: 20px;
+	background-color: lightgrey;
+	margin-right: 15px;
+}
+.item-title{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+.item-type{
+	display: none;
+}
+.item-location{
+	display: none;
+}
+.item-description{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding: 5px;
+}
+
+.item-img{
+	cursor: pointer;
+	width: 100%;
+	height: 200px;
+}
+
+
+
+/*Item in */
+.item-in{
+	padding: 10px;
+	display: flex;
+}
+.item-in-right{
+	margin-left: 10px;
+	display: flex;
+	flex-direction: column;
+}
+.item-in-data{
+	display: flex;
+	flex-direction: column;
+}
+.item-in-back-img{
+	width: 400px;
+	height: auto;
+}
+.item-in-value{
+	display: 'none';
+	
+}
+.item-in-attribute{
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	color: white;
+	margin-bottom: 5px;
+}
+.item-description{
+	
+	height: 90px;
+	overflow: hidden;
+}
+#trade-in-back {
+	margin-top: 5px;
+	outline: none;
+	text-decoration: none;
+	height : 30px;
+	width: 100px;
+	color: white;
+	border: none;
+	border-radius: 50px;
+	cursor:pointer;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+	background-color: #F7882F;
+	opacity: 0.9;
+}
+.fas.fa-times{
+	color: white;
+}
+#trade-in-back:hover{
+	opacity: 1;
+}
