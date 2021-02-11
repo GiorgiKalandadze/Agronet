@@ -1,7 +1,13 @@
-
+var k = 0;
 document.addEventListener('click', function (e){
 	if(e.target.className == "category"){
-		filterGroups(e, e.target.id);
+		console.log(currentCategoryId);
+		document.getElementById(currentCategoryId).style.backgroundColor = "white";
+		console.log(document.getElementById(currentCategoryId).style.backgroundColor);
+		document.getElementById(currentCategoryId).style.color = "black";
+		loadGroupOfCategory(e,e.target.id);
+		closeNavGroup();
+		// filterGroups(e, e.target.id);
 	}
 	// if(e.target.id == 'back'){
 	// 	document.getElementsByClassName('group-cont')[0].innerHTML = groupsListHTML;
@@ -56,6 +62,48 @@ document.addEventListener('click', function (e){
 	
 });
 
+var currentCategoryId = "Animals";
+
+function loadGroupOfCategory(e,id){
+	currentCategoryId = id;
+	var type = 'group ' + id;
+	
+	var groupDivs = document.getElementsByClassName(type);
+	
+	removeAllGroups();
+	
+	if(e.target.getAttribute("checked") == "no"){
+		checked += 1;
+		for(i = 0; i < groupDivs.length; i++){
+			groupDivs[i].style.display = 'block';
+			
+		}
+		e.target.setAttribute("checked", "yes");
+		e.target.style.backgroundColor = '#536272';
+	 	e.target.style.color = 'white';
+	} else {	
+		e.target.setAttribute("checked", "no");
+		checked -= 1;
+		if(checked == 0){
+			displayAllGroups();
+		} else {
+			for(i = 0; i < groupDivs.length; i++){
+				groupDivs[i].style.display = 'none';
+				
+			}
+			e.target.style.backgroundColor = 'white';
+			e.target.style.color = 'black';
+		}
+	}
+}
+
+
+
+
+
+
+
+
 var currentGroupName;
 var checked = 0;
 function displayAllGroups(){
@@ -82,14 +130,12 @@ function filterGroups(e, id){
 	
 	var groupDivs = document.getElementsByClassName(type);
 	
-	if(checked == 0){
-		removeAllGroups();
-	}
+	
+	removeAllGroups();
 	if(e.target.getAttribute("checked") == "no"){
 		checked += 1;
 		for(i = 0; i < groupDivs.length; i++){
 			groupDivs[i].style.display = 'block';
-			
 		}
 		e.target.setAttribute("checked", "yes");
 		e.target.style.backgroundColor = '#536272';

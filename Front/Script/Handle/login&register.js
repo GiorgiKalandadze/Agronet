@@ -17,7 +17,7 @@ document.addEventListener('click', function (e){
 	//Logout
 	if(e.target.id == "log-out"){
 		logged = false;
-		document.getElementsByClassName('main-content')[0].innerHTML = startHTML;
+		document.getElementsByClassName('main-content')[0].innerHTML = indexHTML;
 		document.getElementById('login-button').innerHTML = 'Login';
 
 	}

@@ -1,15 +1,13 @@
 document.addEventListener('click', function (e){
 	if(e.target.className == "trade-category-button"){
-		if(chosenCategoryId == 0){
-			chooseCategory(e.target.id);
-			document.getElementsByClassName('trade-right')[0].innerHTML = '';
-			loadCategoryItems(e.target.id);
-		} else {
-			clearCategory(e.target.id);
-			document.getElementsByClassName('trade-right')[0].innerHTML = '';
-			loadCategoryItems(1);
-		}
+		clearCategory(chosenCategoryId);
+		chooseCategory(e.target.id);
+		document.getElementsByClassName('trade-right')[0].innerHTML = '';
+		loadCategoryItems(e.target.id.substring(8));
+		closeNavTrade();
 	}
+	
+	
 	//e.preventDefault();
 	if(e.target.className == 'item-img'){
 		document.getElementsByClassName('trade-right')[0].innerHTML = itemInHTML;
@@ -17,16 +15,13 @@ document.addEventListener('click', function (e){
 	}
 	if(e.target.id == 'trade-in-back'){
 		document.getElementsByClassName('trade-right')[0].innerHTML = '';
-		if(chosenCategoryId == 0){
-			loadCategoryItems(1);
-		} else {
-			loadCategoryItems(chosenCategoryId);
-		}
+		loadCategoryItems(chosenCategoryId.substring(8));
+		
 	}
 	
 });
 
-var chosenCategoryId = 0;
+var chosenCategoryId = "category1";
 function clearCategory(id){
 	document.getElementById(id).style.backgroundColor = "white";
 	document.getElementById(id).style.color = "black";
@@ -55,6 +50,8 @@ function removeAllItems(){
 }
 
 function loadCategoryItems(index){
+	console.log(index);
+	console.log(items.length);
 	var array = items[index - 1];
 	var d = document.createElement('div');
 	d.className = 'trade-list';

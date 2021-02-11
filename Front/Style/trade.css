@@ -8,6 +8,12 @@ body{
 	justify-content: flex-start;
 	background-color: white;
 }
+#hamburger-trade{
+	display: none;
+	border: none;
+	outline: none;
+	background-color: red;
+}
 .trade-left{	
 	/*width: 200px;*/
 	width: 20%;
@@ -32,7 +38,7 @@ body{
 .trade-category-button{
 	background-color: white;
 	border: none;
-	color: red;
+	/* color: red; */
 	outline: none;
 	cursor: pointer;
 	text-align: left;
@@ -92,6 +98,7 @@ body{
 	margin-bottom: 20px;
 	background-color: lightgrey;
 	margin-right: 15px;
+	overflow-y: hidden;
 }
 .item-title{
 	margin-top: 0px;
@@ -171,4 +178,93 @@ body{
 }
 #trade-in-back:hover{
 	opacity: 1;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 770px) {
+	.trade-cont{
+		
+		/* border: 3px solid yellow; */
+		flex-direction: column;
+	}
+
+	#hamburger-trade{
+		cursor: pointer;
+		color:white;
+		display: block;
+		width: 50%;
+		background-color: #536272;
+		align-self: center;
+		margin: 10px;
+	}
+	.trade-left{
+		display: inline;
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #536272;
+		overflow-x: hidden;
+		transition: 0.5s;
+		text-align: center;
+		font-size: 0.5rem;
+		padding: 5px;
+	}
+	#closebtnTrade{
+		display: block;
+		position: absolute;
+	  	top: 5px;
+	  	right: 15px;
+	  	font-size: 60px;
+		background-color: #536272;
+		border: none;
+		outline: none;
+		color: white;
+	}
+
+	.trade-right{
+		/* border: 3px solid red; */
+		width: 100%;
+	}
+	.trade-list{
+		/* border: 3px solid blue; */
+		width: 100%;
+		justify-content: space-around;
+	}
+
+	.item-in{
+		align-items: center;
+		flex-direction: column;
+		overflow-y: scroll;
+
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.trade-item{
+		width: 35%;
+	}
+}
+@media screen and (max-width: 550px) {
+	.trade-item{
+		width: 300px;
+	}
+	.item-in-back-img{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	
+	.trade-item{
+		width: 100%;
+	}
 }

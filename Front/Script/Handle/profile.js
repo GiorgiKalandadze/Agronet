@@ -92,7 +92,29 @@ function loadEducation(index){
 }
 
 
-
-function loadGuestProfile(){
+//Edit Profile ///////////////////////////////////////////
+//Profile
+document.addEventListener('click', function (e){
 	
-}
+	if(e.target.id == "edit-profile"){
+		document.getElementById('right-box').innerHTML = editProfileHTML;
+		user = users[loggedID];
+		document.getElementById('edit-profile-row-username').value = user.username;
+		document.getElementById('edit-profile-row-password').value = user.password;
+		document.getElementById('edit-profile-row-email').value = user.email;
+		document.getElementById('edit-profile-row-status').value = user.status;
+	}
+	if(e.target.id == 'edit-profile-save-changes'){
+		//var username = document.getElementById('edit-profile-row-username').value;
+		var password = document.getElementById('edit-profile-row-password').value;
+		var email = document.getElementById('edit-profile-row-email').value;
+		var status = document.getElementById('edit-profile-row-status').value;
+		
+		users[loggedID].password = password;
+		users[loggedID].email = email;
+		users[loggedID].status = status;
+
+		loadExperience(loggedID);
+		loadEducation(loggedID);
+	}
+});

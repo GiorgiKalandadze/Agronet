@@ -12,6 +12,7 @@ document.addEventListener("click", function(e){
 						"text":text};
 		posts.push(newPost);
 		document.getElementsByClassName("containerPost")[0].innerHTML = "";
+		document.getElementById("new-post-text").value = "";
 		loadPosts();
 		
 	}

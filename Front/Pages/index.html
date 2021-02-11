@@ -32,22 +32,26 @@
 </head>	
 
 <body>
+	
 	<header id="header-id" class="navbarContainer">
 		<button id="home-button">AgroNet</button>
-		<button id="hamburger-header"><i class="fas fa-bars"></i></button>
+		<button id="hamburger-header" onclick="openNav()">=</button>
 	    <div id="rightSide">
-	      <nav>
-	        <ul class="nav_links">
-	          <li class="navElem"><button id="header-nav-main" class="navTitle">Main</button></li>
-	          <li class="navElem"><button id="header-nav-groups" class="navTitle">Groups</button></li>
-	          <li class="navElem"><button id="header-nav-people" class="navTitle">People</button></li>
-	          <li class="navElem"><button id="header-nav-trade" class="navTitle">Trade</button></li>
-	          <li class="navElem"><button id="header-nav-about" class="navTitle">About Us</button></li>
-	          <li class="navElem"><button id="header-nav-contact" class="navTitle">Contact</button></li>
-	        </ul>
-	      </nav>
-	      <button id="login-button">Login</button>  
+	   		<button id="closebtn" onclick="closeNav()">&times;</button>
+	   		<nav id="header-navs">
+		        <ul class="nav_links">
+		          <li class="navElem"><button id="header-nav-main" class="navTitle">Main</button></li>
+		          <li class="navElem"><button id="header-nav-groups" class="navTitle">Groups</button></li>
+		          <li class="navElem"><button id="header-nav-people" class="navTitle">People</button></li>
+		          <li class="navElem"><button id="header-nav-trade" class="navTitle">Trade</button></li>
+		          <li class="navElem"><button id="header-nav-about" class="navTitle">About Us</button></li>
+		          <li class="navElem"><button id="header-nav-contact" class="navTitle">Contact</button></li>
+		        </ul>
+	      	</nav>
+	      	<button id="login-button">Login</button>  
 	    </div>
+		
+		
 	</header>
 
 	<!-- <a id="go-up" href="#header-id"><lable>Top</lable></a> -->
@@ -191,6 +195,9 @@
   <script src="../Script/Handle/groups.js"></script>
   <script src="../Script/Handle/main.js"></script>
   <script src="../Script/Handle/trade.js"></script>
+  <script src="../Script/Handle/people.js"></script>
+
+  <script src="../Script/Responsive/responsive.js"></script>
 
 	
 </body>
