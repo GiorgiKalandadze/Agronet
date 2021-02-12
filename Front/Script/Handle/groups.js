@@ -50,12 +50,11 @@ document.addEventListener('click', function (e){
 	}
 	if(e.target.id == "group-new-post-button"){
 		var text = document.getElementById("new-post-text-group").value;
-		console.log(loggedID);
 		var newPost = {"id":posts.length + 1, "author_id":loggedID, "date":"17 Feb",
 						"text":text};
 		posts.push(newPost);
 		document.getElementsByClassName("group-posts")[0].innerHTML = "";
-		loadGroupPosts(0);
+		loadGroupPosts();
 		
 	}
 	
@@ -184,10 +183,11 @@ function loadGroups(){
 
 
 //Group In
-function loadGroupPosts(id){
+function loadGroupPosts(){
 	var currPost;
 
 	for(i = posts.length - 1; i >= 0; i--){
+		console.log(i);
 		currPost = posts[i];
 		//First Row
 		var divPost = document.createElement('div');
@@ -197,11 +197,11 @@ function loadGroupPosts(id){
 		var imgAvatar = document.createElement('img');
 		imgAvatar.className = "postAvatar";
 		
-		imgAvatar.src = "../Images/People/" + profiles[currPost.author_id - 1].img;
-		imgAvatar.alt = profiles[currPost.author_id - 1].name + " " + profiles[currPost.author_id - 1].surname;
+		imgAvatar.src = "../Images/People/" + profiles[currPost.author_id].img;
+		imgAvatar.alt = profiles[currPost.author_id].name + " " + profiles[currPost.author_id].surname;
 		var pName = document.createElement('p');
 		pName.className = "postAuthorName";
-		pName.innerHTML = profiles[currPost.author_id - 1].name + " " + profiles[currPost.author_id - 1].surname;
+		pName.innerHTML = profiles[currPost.author_id].name + " " + profiles[currPost.author_id].surname;
 		var pDate = document.createElement('p');
 		pDate.className = "postDate";
 		pDate.innerHTML = currPost.date;

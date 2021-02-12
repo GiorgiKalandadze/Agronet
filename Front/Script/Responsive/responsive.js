@@ -9,7 +9,6 @@ function openNav() {
 }
 
 function closeNav() {
-  
   if(window.screen.availWidth < 770){
     document.getElementById("rightSide").style.width = "0%";
   }

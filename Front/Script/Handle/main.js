@@ -10,6 +10,7 @@ document.addEventListener("click", function(e){
 		
 		var newPost = {"id":posts.length + 1, "author_id":loggedID, "date":"17 Feb",
 						"text":text};
+		console.log(loggedID);
 		posts.push(newPost);
 		document.getElementsByClassName("containerPost")[0].innerHTML = "";
 		document.getElementById("new-post-text").value = "";
@@ -20,9 +21,9 @@ document.addEventListener("click", function(e){
 
 function loadPosts(){
 	var currPost;
-	
-	for(i = posts.length - 1; i >= 0; i--){
+	for(i = posts.length - 1; i > 0; i--){
 		currPost = posts[i];
+	
 		//First Row
 		var divPost = document.createElement('div');
 		divPost.className = "post";
