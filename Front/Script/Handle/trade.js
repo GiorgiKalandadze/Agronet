@@ -50,8 +50,6 @@ function removeAllItems(){
 }
 
 function loadCategoryItems(index){
-	console.log(index);
-	console.log(items.length);
 	var array = items[index - 1];
 	var d = document.createElement('div');
 	d.className = 'trade-list';
@@ -67,6 +65,7 @@ function loadCategoryItems(index){
 		var img = document.createElement('img');
 
 		img.src = "../Images/Items/" + folder + "/" + item.img;
+		img.alt = item.name;
 		img.className = 'item-img';
 		img.id = item.id;
 		img.setAttribute("categoryId", index);
@@ -117,6 +116,7 @@ function loadItemIn(e){
 	var categoryArray = items[categoryId - 1];
 	var item = categoryArray[id];
 	document.getElementsByClassName('item-in-back-img')[0].src = "../Images/Items/" + categoryArray[0] + "/" + item.img;
+	document.getElementsByClassName('item-in-back-img')[0].alt = item.name; 
 	document.getElementById('item-in-name').innerHTML = item.name;
 	document.getElementById('item-in-price').innerHTML = item.price;
 	document.getElementById('item-in-description').innerHTML = item.description;

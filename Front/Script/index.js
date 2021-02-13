@@ -1,24 +1,13 @@
-window.addEventListener('popstate', (event) => {
-  document.getElementsByClassName('main-content')[0].innerHTML = event.state;
-});
-
 document.addEventListener('click', function (e){
 	if(e.target.id == 'join-button'){
-		document.getElementsByClassName('main-content')[0].innerHTML = registerHTML;
-		window.history.pushState(registerHTML, "Register Page", "register");
-		window.history.replaceState(registerHTML, "Register Page", "register");
-	}
-	if(e.target.id == 'home-button'){
-		document.getElementsByClassName('main-content')[0].innerHTML = indexHTML;
-	}
-	if(e.target.id == 'login-button'){
+		router.navigate('/Register');
+	} else if(e.target.id == 'home-button'){
+		router.navigate('/Home');
+	} else if(e.target.id == 'login-button'){
 		if(e.target.innerHTML == "Login"){
-			document.getElementsByClassName('main-content')[0].innerHTML = loginHTML;
-			window.history.pushState(loginHTML, "Login Page", "login");
+			router.navigate('/Login');
 		} else {
-			document.getElementsByClassName('main-content')[0].innerHTML = profileHTML;
-			window.history.pushState(profileHTML, "Profile Page", "profile");
-			loadProfile(loggedID);
+			router.navigate('/Profile/' + loggedID);
 		}
 		closeNav();
 	}
@@ -26,44 +15,26 @@ document.addEventListener('click', function (e){
 		closeNav();
 	}
 	if(e.target.id == 'header-nav-main'){
-		if(logged){
-			document.getElementsByClassName('main-content')[0].innerHTML = mainHTML;
-			loadPosts();
-			loadNews();
-			window.history.pushState(mainHTML, "Main Page", "main");
-		} else {	
-			document.getElementsByClassName('main-content')[0].innerHTML = indexHTML;
-			window.history.pushState(indexHTML, "Index Page", "idnex");
-		}		
+		router.navigate('/Home');
+	} else if(e.target.id == 'header-nav-groups'){
+		router.navigate('/Groups');
+	} else if(e.target.id == 'header-nav-people'){
+		router.navigate('/People');
+	} else if(e.target.id == 'header-nav-trade'){
+		router.navigate('/Items');	
+	} else if(e.target.id == 'header-nav-about'){
+		router.navigate('/About');
+	} else if(e.target.id == 'header-nav-contact'){
+		router.navigate('/Contact');
+	} else if(e.target.id == 'privacy-link'){
+		router.navigate('/Privacy');
 	}
-	if(e.target.id == 'header-nav-groups'){
-		document.getElementsByClassName('main-content')[0].innerHTML = groupsListHTML;
-		loadGroups();
-		window.history.pushState(groupsListHTML, "Groups Page", "groups");
-	}
-	if(e.target.id == 'header-nav-people'){
-		document.getElementsByClassName('main-content')[0].innerHTML = peopleListHTML;
-		loadPeople();
-		window.history.pushState(peopleListHTML, "People Page", "people");
-	}
-	if(e.target.id == 'header-nav-trade'){
-		document.getElementsByClassName('main-content')[0].innerHTML = tradeHTML;
-		loadCategoryItems(1);
-		window.history.pushState(tradeHTML, "Trade Page", "trade");
-	}
-	if(e.target.id == 'header-nav-about'){
-		document.getElementsByClassName('main-content')[0].innerHTML = aboutHTML;
-		window.history.pushState(aboutHTML, "About Page", "about");
-	}
-	if(e.target.id == 'header-nav-contact'){
-		document.getElementsByClassName('main-content')[0].innerHTML = contactHTML;
-		window.history.pushState(contactHTML, "Contact Page", "contact");
-	}
-	if(e.target.id == 'privacy-link'){
-		document.getElementsByClassName('main-content')[0].innerHTML = privacyHTML;
-		window.history.pushState(privacyHTML, "Privacy Page", "privacy");
-		window.scrollTo(0,0);
-	}
+
+	if(e.target.id == 'contact-send-button'){ //Contact Page Send
+		document.getElementById('message-sent').style.display = 'inline';
+		document.getElementById('contact-left').style.display = 'none';
+	}	
+	
 }); 
 
 
@@ -182,7 +153,7 @@ var registerHTML =
 			<button id="register-button">Sign Up</button>
 		</div>
 	</div>
-	<img id="registerBackImg" src="../Images/Register/reg.png">
+	<img id="registerBackImg" src="../Images/Register/reg.png" alt="Register Background">
 </div>
 `
 
@@ -191,10 +162,10 @@ var registerHTML =
 var loginHTML = 
 `
 <div class="login-container">
-	<img id="loginBackImg" src="../Images/Login/log.svg">
+	<img id="loginBackImg" src="../Images/Login/log.svg" alt="Login Background">
 	<div class="loginBox">
 		<div class="loginForm">
-			<img src="../Images/Login/profile2.png" class="avatar">
+			<img src="../Images/Login/profile2.png" class="avatar" alt="Login Avatar">
 			<h2 id="login-welcome-label">Welcome</h2>
 			<h5 id="wrong-login">Wrong username or password</h5>
 			<div class="inputBox first">
@@ -242,10 +213,10 @@ var mainHTML =
   		<div id="main-feed-right">
   			<h3 id="advertisement-label">Advertisement</h3>
   			<div class="ad">
-          		<img class="ad-img" src="../Images/Ads/ad3.png">
+          		<img class="ad-img" src="../Images/Ads/ad3.png" alt="Ads">
         	</div>
 	        <div class="ad">
-	          <img class="ad-img" src="../Images/Ads/ad4.png">
+	          <img class="ad-img" src="../Images/Ads/ad4.png" alt="Ads">
 	        </div>	
   		</div>
 	
@@ -266,6 +237,7 @@ var tradeHTML =
 					<button class="trade-category-button" id="category3">Decorative Plants</button>
 					<button class="trade-category-button" id="category4">Seeds</button>
 					<button class="trade-category-button" id="category5">Vehicle</button>
+					<button class="trade-category-button" id="category6">Plant Growth Regulators</button>
 				</div>
 				<hr class="trade-hr">
 				<!--
@@ -457,7 +429,7 @@ var aboutHTML =
     <div class="team">
       	<div class="member">
         	<div class="member-img-div">
-           		<img class="member-img" src="../Images/People/tristan.jpg">
+           		<img class="member-img" src="../Images/People/tristan.jpg" alt="Tristan Harris">
             </div>
             <h3 class="member-name">Tristan Harris</h3>
             <h5 class="member-occupation">Computer Scientist</h5>
@@ -465,7 +437,7 @@ var aboutHTML =
        	</div>
     	<div class="member">
            	<div class="member-img-div">
-            	<img id="geta" class="member-img" src="../Images/People/cv.jpg">
+            	<img id="geta" class="member-img" src="../Images/People/cv.jpg" alt="Giorgi Kalandadze">
             </div>
             <h3 class="member-name">Giorgi Kalandadze</h3>
             <h5 class="member-occupation">Software Developer</h5>
@@ -509,7 +481,7 @@ var contactHTML =
 	</div>
 	<div id="contact-right">
 		<div id="map">
-			<iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.6461618650137!2d44.73647295042225!3d41.70657368400889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40447344e8047ced%3A0xb53d8ecd4495903f!2sBusiness%20and%20Technology%20University!5e0!3m2!1sen!2sge!4v1610695757399!5m2!1sen!2sge" width="800" height="550" frameborder="0" style="border:0;" allowfullscreen></iframe>
+			<iframe id="google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.6461618650137!2d44.73647295042225!3d41.70657368400889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40447344e8047ced%3A0xb53d8ecd4495903f!2sBusiness%20and%20Technology%20University!5e0!3m2!1sen!2sge!4v1610695757399!5m2!1sen!2sge" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen></iframe>
 		</div>
 	</div>
 </div>

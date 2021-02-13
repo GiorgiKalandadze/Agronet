@@ -1,9 +1,7 @@
 document.addEventListener('click', function (e){
 	if(e.target.className == 'listAvatar'){
-		document.getElementsByClassName('main-content')[0].innerHTML = profileHTML;
-		document.getElementsByClassName('profile-left-button')[0].style.visibility = 'hidden';
-		document.getElementsByClassName('profile-left-button')[1].style.visibility = 'hidden';
-		loadProfile(e.target.id - 1);
+		var id = e.target.id;
+		router.navigate('/People/' + id);
 	}
 })
 

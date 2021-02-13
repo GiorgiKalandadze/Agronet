@@ -2,12 +2,13 @@
 function loadPeople(){
 	for(i in profiles){
 		person = profiles[i];
-		var farmer = person[i];
+		
 		var div = document.createElement('div');
 		div.className = 'info';
 		var img = document.createElement('img');
 		img.className = 'listAvatar';
 		img.src  = "../Images/People/" + person.img;
+		img.alt  = profiles.username;
 		img.id = person.id;
 		var name = document.createElement('h4');
 		name.className = "personName";
@@ -38,9 +39,7 @@ function filterPeople(searchValue1, searchValue2){
 		if(currName.toUpperCase().indexOf(searchValue1.toUpperCase()) > -1 && 
 			currOccu.toUpperCase().indexOf(searchValue2.toUpperCase()) > -1){
 			currDiv.style.display = "";
-			console.log('1');
 		} else {
-			console.log('2');
 			currDiv.style.display = "none";
 		}
 	}

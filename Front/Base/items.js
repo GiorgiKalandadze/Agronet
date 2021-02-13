@@ -769,5 +769,150 @@ var vehicle =
 ]
 
 
+var pgr = 
+[
+	"PGR",
+	{
+		"id":1,
+		"name":"BAYER PLANOFIX",
+		"price":"35$",
+		"img":"BAYER PLANOFIX.jpg",
+		"description":
+		`
+		Maecenas aliquam magna ac dolor vestibulum auctor. 
+		Donec laoreet convallis risus bibendum fermentum. 
+		Morbi quis dictum massa. Etiam at maximus nisl. 
+		Nulla vel ullamcorper diam. 
+		Sed maximus mollis massa, sed commodo sem dapibus vitae. 
+		Fusce pellentesque commodo mollis. 
+		`
+	},
+	{
+		"id":2,
+		"name":"BIOVITA BIOACTIVATOR",
+		"price":"28$",
+		"img":"BIOVITA BIOACTIVATOR.jpg",
+		"description":
+		`
+		Nam tempus dui lorem, sit amet lacinia lacus aliquet eu. Praesent faucibus, massa sed viverra pulvinar, lectus nunc egestas augue, sed semper nibh est sed ante. Quisque id imperdiet velit. Integer accumsan, ipsum nec elementum posuere, nisl nulla facilisis risus, nec interdum augue lorem quis nunc. 
+		`
+	},
+	{
+		"id":3,
+		"name":"ETHREL BAYER",
+		"price":"52$",
+		"img":"ETHREL BAYER.jpg",
+		"description":
+		`
+		Morbi nec dui scelerisque, vulputate lorem eget, rhoncus velit. Etiam elementum magna est, id placerat dolor euismod non. Nunc blandit erat id luctus varius. 
+		`
+	},
+	{
+		"id":4,
+		"name":"Godrej Diamore",
+		"price":"45$",
+		"img":"Godrej Diamore.jpg",
+		"description":
+		`
+		Donec fringilla maximus lectus, vitae ornare felis. Praesent fermentum vehicula ante eu feugiat. Aliquam eget diam orci. Curabitur nunc orci, sagittis ac felis et, ornare luctus augue. Fusce mauris magna, ultrices eu eros eu, congue sagittis urna.
+		`
+	},
+	{
+		"id":5,
+		"name":"Godrej Double",
+		"price":"25$",
+		"img":"Godrej Double.jpg",
+		"description":
+		`
+		Phasellus fringilla tortor a tortor ornare sagittis. Praesent scelerisque vel enim sit amet tempor. Vivamus vulputate tellus eget nibh tincidunt, id malesuada dui efficitur. Suspendisse potenti. 
+		`
+	},
+	{
+		"id":6,
+		"name":"Godrej Supershakti",
+		"price":"34$",
+		"img":"Godrej Supershakti.jpg",
+		"description":
+		`
+		Nam tempus velit vitae sem pretium, tristique mattis libero sollicitudin. Duis egestas dui id leo posuere suscipit. Morbi pretium aliquet condimentum. 
+		`
+	},
+	{
+		"id":7,
+		"name":"HOSHI SUMITOMO",
+		"price":"15$",
+		"img":"HOSHI SUMITOMO.jpg",
+		"description":
+		`
+		Proin volutpat sapien vel est tincidunt feugiat. Ut lacinia finibus aliquam. Vestibulum eget finibus tellus. Nulla nisl purus, sagittis nec nisl ac, placerat finibus turpis. Cras in ipsum et dolor ornare ornare. 
+		`
+	},
+	{
+		"id":8,
+		"name":"HUMACID",
+		"price":"25$",
+		"img":"HUMACID.jpg",
+		"description":
+		`
+		Vestibulum fringilla mi nibh, eu lacinia magna condimentum quis. Suspendisse tincidunt ex quis neque tincidunt, dignissim maximus leo eleifend. Integer laoreet arcu nec ipsum pulvinar, eu euismod mi blandit.
+		`
+	},
+	{
+		"id":9,
+		"name":"Lihocin",
+		"price":"60$",
+		"img":"Lihocin.jpg",
+		"description":
+		`
+		Vestibulum fringilla mi nibh, eu lacinia magna condimentum quis. Suspendisse tincidunt ex quis neque tincidunt, dignissim maximus leo eleifend. Integer laoreet arcu nec ipsum pulvinar, eu euismod mi blandit.
+		`
+	},
+	{
+		"id":10,
+		"name":"TagGibb 1GM",
+		"price":"55$",
+		"img":"TagGibb 1GM.jpg",
+		"description":
+		`
+		Nam vitae facilisis massa. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse eu tellus id sapien congue sollicitudin sit amet ut urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent fringilla semper ex, ut placerat arcu faucibus eget. 
+		`
+	},
+	{
+		"id":11,
+		"name":"Tagphon 39",
+		"price":"75$",
+		"img":"Tagphon 39.jpg",
+		"description":
+		`
+		Accumsan nunc elementum, convallis turpis ac, pellentesque sem. Nulla libero quam, auctor vitae tempus vulputate, pulvinar sit amet turpis. Pellentesque non molestie nulla. Nunc molestie justo dui, vel sollicitudin dolor pulvinar ac. Nullam nec lorem mi. 
+		`
+	},
+	{
+		"id":12,
+		"name":"VIPUL BOOSTER",
+		"price":"29$",
+		"img":"VIPUL BOOSTER.jpg",
+		"description":
+		`
+		Accumsan nunc elementum, convallis turpis ac, pellentesque sem. Nulla libero quam, auctor vitae tempus vulputate, pulvinar sit amet turpis. Pellentesque non molestie nulla. Nunc molestie justo dui, vel sollicitudin dolor pulvinar ac. Nullam nec lorem mi. 
+		`
+	},
+	{
+		"id":13,
+		"name":"Zymegold Plus",
+		"price":"35$",
+		"img":"Zymegold Plus.jpg",
+		"description":
+		`
+		Accumsan nunc elementum, convallis turpis ac, pellentesque sem. Nulla libero quam, auctor vitae tempus vulputate, pulvinar sit amet turpis. Pellentesque non molestie nulla. Nunc molestie justo dui, vel sollicitudin dolor pulvinar ac. Nullam nec lorem mi. 
+		`
+	}
+]
 
-var items = [agrochemicals, cropProtection, decorativePlants, seeds, vehicle];
+
+
+
+
+
+
+var items = [agrochemicals, cropProtection, decorativePlants, seeds, vehicle, pgr];
