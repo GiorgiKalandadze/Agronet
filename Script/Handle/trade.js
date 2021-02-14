@@ -65,7 +65,7 @@ function loadCategoryItems(index){
 		div.className = 'trade-item';
 		var img = document.createElement('img');
 
-		img.src = "../Images/Items/" + folder + "/" + item.img;
+		img.src = "./Images/Items/" + folder + "/" + item.img;
 		img.alt = item.name;
 		img.className = 'item-img';
 		img.id = item.id;
@@ -116,7 +116,7 @@ function loadItemIn(e){
 	var categoryId = e.target.getAttribute("categoryId");
 	var categoryArray = items[categoryId - 1];
 	var item = categoryArray[id];
-	document.getElementsByClassName('item-in-back-img')[0].src = "../Images/Items/" + categoryArray[0] + "/" + item.img;
+	document.getElementsByClassName('item-in-back-img')[0].src = "./Images/Items/" + categoryArray[0] + "/" + item.img;
 	document.getElementsByClassName('item-in-back-img')[0].alt = item.name; 
 	document.getElementById('item-in-name').innerHTML = item.name;
 	document.getElementById('item-in-price').innerHTML = item.price;

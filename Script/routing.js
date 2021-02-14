@@ -106,7 +106,7 @@ router.on({
 		var name = "";
 		for(i = 0; i < groups.length; i++){
 			if(groups[i].id == args.id){
-				src = "../Images/Group/" + groups[i].img;
+				src = "./Images/Group/" + groups[i].img;
 				name = groups[i].name;
 				break;
 			}

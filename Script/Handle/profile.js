@@ -14,7 +14,7 @@ function loadProfile(index){
 
 function loadInfo(index){
 	var profile = profiles[index]; //indexing starts from 0 in arrays 
-	document.getElementById('profile-left-img').src = "../Images/People/" + profile.img;
+	document.getElementById('profile-left-img').src = "./Images/People/" + profile.img;
 	document.getElementById('profile-name').innerHTML = profile.name + " " + profile.surname;
 	document.getElementById('profile-username').innerHTML = profile.username;
 	document.getElementById('profile-occupation').innerHTML = profile.occupation;

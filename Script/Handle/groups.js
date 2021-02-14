@@ -6,7 +6,8 @@ document.addEventListener('click', function (e){
 	}
 	if(e.target.id == "group-new-post-button"){
 		var text = document.getElementById("new-post-text-group").value;
-		var newPost = {"id":posts.length + 1, "author_id":loggedID, "date":"17 Feb",
+		var d = new Date();
+		var newPost = {"id":posts.length + 1, "author_id":loggedID, "date":d.getDate() + "." + d.getMonth(),
 						"text":text};
 		posts.push(newPost);
 		document.getElementsByClassName("group-posts")[0].innerHTML = "";
@@ -23,7 +24,7 @@ function loadGroups(){
 		var div = document.createElement('div');
 		div.className = 'group';
 		var img = document.createElement('img');
-		img.src = "../Images/Group/" + group.img;
+		img.src = "./Images/Group/" + group.img;
 		img.alt = group.name;
 		img.className = 'groupImg';
 		img.id = group.id;
@@ -52,7 +53,7 @@ function loadGroupPosts(){
 		divPFR.className = "postfirstRow";
 		var imgAvatar = document.createElement('img');
 		imgAvatar.className = "postAvatar";
-		imgAvatar.src = "../Images/People/" + profiles[currPost.author_id].img;
+		imgAvatar.src = "./Images/People/" + profiles[currPost.author_id].img;
 		imgAvatar.alt = profiles[currPost.author_id].name + " " + profiles[currPost.author_id].surname;
 		var pName = document.createElement('p');
 		pName.className = "postAuthorName";

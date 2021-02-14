@@ -6,7 +6,8 @@ function loadPeople(){
 		div.className = 'info';
 		var img = document.createElement('img');
 		img.className = 'listAvatar';
-		img.src  = "../Images/People/" + person.img;
+		img.src  = "Images/People/" + person.img;
+		console.log(img.src);
 		img.alt  = profiles.username;
 		img.id = person.id;
 		var name = document.createElement('h4');

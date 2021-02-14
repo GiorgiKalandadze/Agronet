@@ -31,7 +31,7 @@ function loadPosts(){
 		divPFR.className = "postfirstRow";
 		var imgAvatar = document.createElement('img');
 		imgAvatar.className = "postAvatar";
-		imgAvatar.src = "../Images/People/" + profiles[currPost.author_id].img;
+		imgAvatar.src = "./Images/People/" + profiles[currPost.author_id].img;
 		imgAvatar.alt = profiles[currPost.author_id].name + " " + profiles[currPost.author_id].surname;
 		var pName = document.createElement('p');
 		pName.className = "postAuthorName";
@@ -74,7 +74,7 @@ function loadNews(){
 		div.className = "news";
 		var img = document.createElement("img");
 		img.className = "news-img";
-		img.src = "../Images/News/" + news[i].img;
+		img.src = "./Images/News/" + news[i].img;
 		img.alt = news[i].src;
 		var p = document.createElement("p");
 		p.className = "news-text";

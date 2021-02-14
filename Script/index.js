@@ -161,7 +161,7 @@ var registerHTML =
 			<button id="register-button">Sign Up</button>
 		</div>
 	</div>
-	<img id="registerBackImg" src="../Images/Register/reg.png" alt="Register Background">
+	<img id="registerBackImg" src="./Images/Register/reg.png" alt="Register Background">
 </div>
 `
 
@@ -170,10 +170,10 @@ var registerHTML =
 var loginHTML = 
 `
 <div class="login-container">
-	<img id="loginBackImg" src="../Images/Login/log.svg" alt="Login Background">
+	<img id="loginBackImg" src="./Images/Login/log.svg" alt="Login Background">
 	<div class="loginBox">
 		<div class="loginForm">
-			<img src="../Images/Login/profile.png" class="avatar" alt="Login Avatar">
+			<img src="./Images/Login/profile.png" class="avatar" alt="Login Avatar">
 			<h2 id="login-welcome-label">Welcome</h2>
 			<h5 id="wrong-login">Wrong username or password</h5>
 			<div class="inputBox first">
@@ -219,10 +219,10 @@ var mainHTML =
   		<div id="main-feed-right">
   			<h3 id="advertisement-label">Advertisement</h3>
   			<div class="ad">
-          		<img class="ad-img" src="../Images/Ads/ad3.png" alt="Ads">
+          		<img class="ad-img" src="./Images/Ads/ad3.png" alt="Ads">
         	</div>
 	        <div class="ad">
-	          <img class="ad-img" src="../Images/Ads/ad4.png" alt="Ads">
+	          <img class="ad-img" src="./Images/Ads/ad4.png" alt="Ads">
 	        </div>	
   		</div>
 	
@@ -460,7 +460,7 @@ var aboutHTML =
     <div class="team">
       	<div class="member">
         	<div class="member-img-div">
-           		<img class="member-img" src="../Images/People/tristan.jpg" alt="Tristan Harris">
+           		<img class="member-img" src="./Images/People/tristan.jpg" alt="Tristan Harris">
             </div>
             <h3 class="member-name">Tristan Harris</h3>
             <h5 class="member-occupation">Computer Scientist</h5>
@@ -468,7 +468,7 @@ var aboutHTML =
        	</div>
     	<div class="member">
            	<div class="member-img-div">
-            	<img id="geta" class="member-img" src="../Images/People/cv.jpg" alt="Giorgi Kalandadze">
+            	<img id="geta" class="member-img" src="./Images/People/cv.jpg" alt="Giorgi Kalandadze">
             </div>
             <h3 class="member-name">Giorgi Kalandadze</h3>
             <h5 class="member-occupation">Software Developer</h5>

@@ -47,7 +47,7 @@ document.addEventListener('click', function (e){
 					"occupation":"",
 					"location": "",
 					"phone":"",
-					"img": "../../Images" + "/People/default.jpg",
+					"img": "../Images" + "/People/default.jpg",
 					"experience": [],
 					"education": [],
 				});

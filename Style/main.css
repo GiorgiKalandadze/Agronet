@@ -231,7 +231,7 @@ hr{
 		/* border: 2px solid yellow; */
 	}
 }
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1000px) {
 	#main-feed-left{
 		/* width: 100%; */
 		/* border: 2px solid green; */
