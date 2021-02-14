@@ -3,11 +3,7 @@ document.addEventListener('click', function (e){
 	if(e.target.id == 'loginFormButton'){
 		var valid = checkUserLogin();
 		if(valid){
-			document.getElementById('login-button').innerHTML = document.getElementById("username-input").value;
-			document.getElementsByClassName('main-content')[0].innerHTML = mainHTML;
-			loadPosts();
-			loadNews();
-			logged = true;
+			router.navigate('/Home/' + loggedID);
 		} else {
 			document.getElementsByClassName('main-content')[0].innerHTML = loginHTML;
 			document.getElementById('wrong-login').style.visibility = "visible";
@@ -19,32 +15,41 @@ document.addEventListener('click', function (e){
 		logged = false;
 		document.getElementsByClassName('main-content')[0].innerHTML = indexHTML;
 		document.getElementById('login-button').innerHTML = 'Login';
-
+		router.navigate("/Home");
 	}
 
 	//Register
 	if(e.target.id == 'register-button'){
 		var exist = checkUserExist();
-		console.log('1');
 		if(exist){
-			console.log('2');
 			document.getElementById("register-alert").style.visibility = 'visible';
 		} else {
-			console.log('3');
 			var username = document.getElementById("username-input-reg").value;
 			var password = document.getElementById("password-input-reg").value;
 			var email = document.getElementById("email-input-reg").value;
 			if(username == "" || password == "" || email == ""){
-				console.log('4');
 				document.getElementById("register-alert").style.visibility = 'visible';
 				document.getElementById("register-alert").innerHTML = 'Please fill all fields';
 			} else {
-				console.log('5');
-				var newUserID = users.length + 1;
+				var newUserID = users.length;
 				users.push({
 					"username": username, 
 					"password": password, "id":newUserID, 
 					"email": email, "status":status
+				});
+				profiles.push({
+					"username":username, 
+					"password": password, 
+					"id":newUserID, 
+					"email":email, 
+					"name": "",
+					"surname":"",
+					"occupation":"",
+					"location": "",
+					"phone":"",
+					"img": "../../Images" + "/People/default.jpg",
+					"experience": [],
+					"education": [],
 				});
 				console.log('6');
 				document.getElementById('login-button').innerHTML = document.getElementById("username-input-reg").value;
@@ -54,7 +59,8 @@ document.addEventListener('click', function (e){
 				loadPosts();
 				loadNews();
 				logged = true;
-				console.log('7');
+				loggedID = newUserID;
+				router.navigate("/Home/" + loggedID);
 			}
 		}
 	}

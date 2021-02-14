@@ -25,9 +25,12 @@ body{
 	width: 24%;
 	display: flex;
 	flex-direction: column;
+	height: 560px;
 }
 #profile-left-img{
 	width: 100%;
+	height: 230px;
+	overflow-y: hidden;
 }
 #right-box{
 	/* border: 3px solid red; */
@@ -35,6 +38,7 @@ body{
 	display: flex;
   	flex-direction: column;
   	overflow: hidden;
+	height: 560px;
   	overflow-y: scroll;
 }
 #info {
@@ -51,6 +55,7 @@ body{
 	margin-bottom: 10px;
 }
 #edit-profile-box{
+	overflow-y: scroll;
 	height: 500px;
 	padding-left: 10px;
 	margin-bottom: 10px;
@@ -71,6 +76,7 @@ body{
 	background-color: #f1f1f1;
 	border: none;
 	outline: none;
+	margin-bottom: 5px;
 }
 .edit-profile-row-label{
 	color:white;
@@ -80,6 +86,7 @@ body{
 	margin-bottom:5px;
 }
 #edit-profile-save-changes{
+	font-size: 15px;
 	margin-top: 20px;
 	outline: none;
 	text-decoration: none;
@@ -105,13 +112,16 @@ hr{
 .mm{
 	margin-right: 5px;
 	font-size: 36px;
+	display: inline;
 }
 
 .work-box, .education-box{
 	margin-left: 10px;
 }
 
-
+#change-about{
+	resize: none;
+}
 .social:hover{
 	opacity: 0.6;
 	cursor: pointer;
@@ -147,10 +157,53 @@ hr{
 .profile-left-button:hover{
 	opacity: 1;
 }
+#about{
+	color: white;
+}
+#edit-profile-row-about{
+	height: 100px;
+}
 
+.change-cont{
+	padding: 10px;
+	border: 2px solid red;
+}
+.change-top{
+	border: 2px solid blue;
+	margin-bottom: 10px;
+}
+.new-exp{
+	
+	border: 2px solid red;
+}
+#new-work{
+	border: 2px solid blue;
+}
 
+.change-bot{
+	border: 2px solid black;
+}
+.work-cont{
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	border: 2px solid yellow;
+	margin-bottom: 3px;
+}
 
-
+.change-button{
+	width: 150px;
+	font-size: 15px;
+	background-color: #F7882F;
+	border:none;
+	
+	outline: none;
+	text-decoration: none;
+	bottom: 0px;
+	cursor: pointer;
+	opacity: 0.9;
+	color: white;
+}
 /*Responsive*/
 
 @media screen and (max-width: 770px) {	

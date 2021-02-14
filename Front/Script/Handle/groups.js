@@ -1,15 +1,5 @@
 var k = 0;
 document.addEventListener('click', function (e){
-	if(e.target.className == "category"){
-		//console.log(currentCategoryId);
-		document.getElementById(currentCategoryId).style.backgroundColor = "white";
-		//console.log(document.getElementById(currentCategoryId).style.backgroundColor);
-		document.getElementById(currentCategoryId).style.color = "black";
-		document.getElementById(currentCategoryId).setAttribute("checked", "no");
-		loadGroupOfCategory(e,e.target.id);
-		closeNavGroup();
-		// filterGroups(e, e.target.id);
-	}
 	if(e.target.className == 'groupImg'){
 		var id = e.target.id;
 		router.navigate('/Groups/' + id);
@@ -23,89 +13,15 @@ document.addEventListener('click', function (e){
 		loadGroupPosts();
 	}	
 });
-var currentCategoryId = "Animals";
-function loadGroupOfCategory(e,id){
-	currentCategoryId = id;
-	var type = 'group ' + id;
-	var groupDivs = document.getElementsByClassName(type);
-	removeAllGroups();
-	if(e.target.getAttribute("checked") == "no"){
-		console.log('A');
-		checked += 1;
-		for(i = 0; i < groupDivs.length; i++){
-			groupDivs[i].style.display = 'block';
-		}
-		e.target.setAttribute("checked", "yes");
-		e.target.style.backgroundColor = '#536272';
-	 	e.target.style.color = 'white';
-	} else {	
-		console.log('B');
-		e.target.setAttribute("checked", "no");
-		checked -= 1;
-		if(checked == 0){
-			displayAllGroups();
-		} else {
-			for(i = 0; i < groupDivs.length; i++){
-				groupDivs[i].style.display = 'none';
-				
-			}
-			e.target.style.backgroundColor = 'white';
-			e.target.style.color = 'black';
-		}
-	}
-}
+
 var currentGroupName;
 var checked = 0;
-function displayAllGroups(){
-	var buttons = document.getElementsByClassName("category");	
-	for(j = 0; j < buttons.length; j++){
-		buttons[j].style.backgroundColor='white';
-		buttons[j].style.color='black';
-		buttons[j].style.display='block';
-	}
-	var groups = document.getElementsByClassName("group");
-	for(i = 0; i < groups.length; i++){
-		groups[i].style.display = "block";
-	}
-}
-function removeAllGroups(){
-	var groups = document.getElementsByClassName("group");
-	for(i = 0; i < groups.length; i++){
-		groups[i].style.display = "none";
-	}
-}
-function filterGroups(e, id){
-	var type = 'group ' + id;
-	var groupDivs = document.getElementsByClassName(type);
-	removeAllGroups();
-	if(e.target.getAttribute("checked") == "no"){
-		checked += 1;
-		for(i = 0; i < groupDivs.length; i++){
-			groupDivs[i].style.display = 'block';
-		}
-		e.target.setAttribute("checked", "yes");
-		e.target.style.backgroundColor = '#536272';
-	 	e.target.style.color = 'white';
-	} else {	
-		e.target.setAttribute("checked", "no");
-		checked -= 1;
-		if(checked == 0){
-			displayAllGroups();
-		} else {
-			for(i = 0; i < groupDivs.length; i++){
-				groupDivs[i].style.display = 'none';
-				
-			}
-			e.target.style.backgroundColor = 'white';
-			e.target.style.color = 'black';
-		}
-	}
-}
+
 function loadGroups(){
 	for(i = 0; i < groups.length; i++){
 		var group = groups[i];
 		var div = document.createElement('div');
-		div.className = 'group ' + group.category;
+		div.className = 'group';
 		var img = document.createElement('img');
 		img.src = "../Images/Group/" + group.img;
 		img.alt = group.name;
@@ -163,5 +79,27 @@ function loadGroupPosts(){
 		divPost.appendChild(divPSR);
 		divPost.appendChild(divPTR);
 		document.getElementsByClassName('group-posts')[0].appendChild(divPost);	
+	}
+}
+
+
+document.addEventListener('keyup', function(e){
+	if(e.target.id == 'group-search-name'){	
+		filterGroups(document.getElementById('group-search-name').value);
+	}
+});
+
+//On page people filters people
+function filterGroups(searchValue1){
+	console.log('DD');
+	var divs = document.getElementsByClassName('group');
+	for(i=0; i < divs.length; i++){
+		var currDiv = divs[i];
+		var currName = currDiv.getElementsByClassName('groupTitle')[0].innerHTML;
+		if(currName.toUpperCase().indexOf(searchValue1.toUpperCase()) > -1 ){
+			currDiv.style.display = "";
+		} else {
+			currDiv.style.display = "none";
+		}
 	}
 }

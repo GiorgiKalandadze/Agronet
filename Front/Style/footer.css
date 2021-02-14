@@ -12,9 +12,6 @@
 	display: flex;
 	justify-content: space-around;
 }
-.footer-li{
-	cursor: pointer;
-}
 .footerFirstRow, .footerSecondRow{
 	color:white;
 }

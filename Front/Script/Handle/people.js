@@ -1,8 +1,7 @@
 /*Peope, farmers */
 function loadPeople(){
-	for(i in profiles){
+	for(i=1; i <  profiles.length; i++){
 		person = profiles[i];
-		
 		var div = document.createElement('div');
 		div.className = 'info';
 		var img = document.createElement('img');

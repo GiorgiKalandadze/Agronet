@@ -1,10 +1,6 @@
 var users = 
 [
-	{	"username":"a", 
-		"password": "a", 
-		"id":"0", 
-		"email":"a@gmail.com", 
-	},
+	"users",
 	{	"username":"david", 
 		"password": "david123", 
 		"id":"1", 

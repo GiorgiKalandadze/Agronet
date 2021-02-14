@@ -8,8 +8,8 @@ document.addEventListener('click', function (e){
 
 function loadProfile(index){
 	loadInfo(index);
-	loadExperience(index);
-	loadEducation(index);
+	// loadExperience(index);
+	// loadEducation(index);
 }
 
 function loadInfo(index){
@@ -21,10 +21,10 @@ function loadInfo(index){
 	document.getElementById('profile-location').innerHTML = profile.location;
 	document.getElementById('profile-email').innerHTML = profile.email;
 	document.getElementById('profile-phone').innerHTML = profile.phone;
+	document.getElementById('about').innerHTML = profile.about;
 }
 
 function loadExperience(index){
-	
 	var profile = profiles[index];
 	var experiences = profile.experience;
 	if(experiences.length == 0){
@@ -94,22 +94,30 @@ function loadEducation(index){
 //Edit Profile ///////////////////////////////////////////
 document.addEventListener('click', function (e){
 	if(e.target.id == "edit-profile"){
-		document.getElementById('right-box').innerHTML = editProfileHTML;
-		user = users[loggedID];
-		document.getElementById('edit-profile-row-username').value = user.username;
-		document.getElementById('edit-profile-row-password').value = user.password;
-		document.getElementById('edit-profile-row-email').value = user.email;
-	}
-	if(e.target.id == 'edit-profile-save-changes'){
-		var username = document.getElementById('edit-profile-row-username').value;
+		router.navigate('/Profile/Edit/' + loggedID);
+	} else if(e.target.id == 'edit-profile-save-changes'){
 		var password = document.getElementById('edit-profile-row-password').value;
 		var email = document.getElementById('edit-profile-row-email').value;
+		var name = document.getElementById('edit-profile-row-name').value;
+		var surname = document.getElementById('edit-profile-row-surname').value;
+		var occupation = document.getElementById('edit-profile-row-occupation').value;
+		var location = document.getElementById('edit-profile-row-location').value;
+		var phone = document.getElementById('edit-profile-row-phone').value;
+		var about = document.getElementById('edit-profile-row-about').value;
 		users[loggedID].password = password;
 		users[loggedID].email = email;
 		profiles[loggedID].email = email;
 		profiles[loggedID].password = password;
-		profiles[loggedID].username = username;
+		profiles[loggedID].name = name;
+		profiles[loggedID].surname = surname;
+		profiles[loggedID].occupation = occupation;
+		profiles[loggedID].location = location;
+		profiles[loggedID].phone = phone;
+		profiles[loggedID].about = about;
 		document.getElementById('main-cont').innerHTML = profileHTML;
 		loadProfile(loggedID);
+		router.navigate('/Profile/' + loggedID);
+	} else if(e.target.id == "change-work"){
+		router.navigate('/Profile/Work/' + loggedID);
 	}
 });

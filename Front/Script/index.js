@@ -2,7 +2,11 @@ document.addEventListener('click', function (e){
 	if(e.target.id == 'join-button'){
 		router.navigate('/Register');
 	} else if(e.target.id == 'home-button'){
-		router.navigate('/Home');
+		if(logged){
+			router.navigate('/Home/' + loggedID);
+		} else {	
+			router.navigate('/Home');
+		}	
 	} else if(e.target.id == 'login-button'){
 		if(e.target.innerHTML == "Login"){
 			router.navigate('/Login');
@@ -15,7 +19,11 @@ document.addEventListener('click', function (e){
 		closeNav();
 	}
 	if(e.target.id == 'header-nav-main'){
-		router.navigate('/Home');
+		if(logged){
+			router.navigate('/Home/' + loggedID);
+		} else {	
+			router.navigate('/Home');
+		}	
 	} else if(e.target.id == 'header-nav-groups'){
 		router.navigate('/Groups');
 	} else if(e.target.id == 'header-nav-people'){
@@ -165,7 +173,7 @@ var loginHTML =
 	<img id="loginBackImg" src="../Images/Login/log.svg" alt="Login Background">
 	<div class="loginBox">
 		<div class="loginForm">
-			<img src="../Images/Login/profile2.png" class="avatar" alt="Login Avatar">
+			<img src="../Images/Login/profile.png" class="avatar" alt="Login Avatar">
 			<h2 id="login-welcome-label">Welcome</h2>
 			<h5 id="wrong-login">Wrong username or password</h5>
 			<div class="inputBox first">
@@ -199,7 +207,6 @@ var mainHTML =
 	<div id="main-feed-cont">
   		<div id="main-feed-left">
   			<h3 id="news-label">News</h3>
-
       	</div>
 
       	<div class="main-feed-mid">
@@ -325,12 +332,7 @@ var profileHTML =
     	</div>
     
     	<div id="right-box">
-     		<div class="experience" id="experience-work">
-        		<h2><i class="mm fas fa-suitcase"></i>Work Experience</h2> 
-      		</div>
-      		<div class="experience" id="experience-education">
-        		<h2><i class="mm fas fa-graduation-cap"></i>Education</h2>
-      		</div> 
+			<p id="about"></p>
     	</div>  
   	</div>
 </div>
@@ -341,43 +343,80 @@ var profileHTML =
 var editProfileHTML = 
 `
 <div id="edit-profile-box">
-	<div id="edit-profile-row">
-		<h4 id="first-edit-profile-label"class="edit-profile-row-label">Username</h4>
-		<input class="edit-profile-input" type="text" id="edit-profile-row-username" name="username">
-	</div> 
-	<div id="edit-profile-row">
-		<h4 class="edit-profile-row-label">Password</h4>
-		<input class="edit-profile-input"type="text" id="edit-profile-row-password" name="password">
-	</div>
-	<div id="edit-profile-row">
-		<h4 class="edit-profile-row-label">Email</h4>
-		<input class="edit-profile-input"type="text" id="edit-profile-row-email" name="email">
-	</div>
 	<button id="edit-profile-save-changes">Save Changes</button>
+		<div class="edit-profile-row">
+			<h4 class="edit-profile-row-label">Password</h4>
+			<input class="edit-profile-input"type="text" id="edit-profile-row-password" name="password">
+		</div>
+		<div class="edit-profile-row">
+			<h4 class="edit-profile-row-label">Email</h4>
+			<input class="edit-profile-input"type="text" id="edit-profile-row-email" name="email">
+		</div>
+		<div class="edit-profile-row">
+			<h4 class="edit-profile-row-label">Name</h4>
+			<input class="edit-profile-input"type="text" id="edit-profile-row-name" name="name">
+		</div>
+		<div class="edit-profile-row">
+			<h4 class="edit-profile-row-label">Surname</h4>
+			<input class="edit-profile-input"type="text" id="edit-profile-row-surname" name="surname">
+		</div>
+		<div class="edit-profile-row">
+			<h4 class="edit-profile-row-label">Occupation</h4>
+			<input class="edit-profile-input"type="text" id="edit-profile-row-occupation" name="surname">
+		</div>
+		<div class="edit-profile-row">
+			<h4 class="edit-profile-row-label">Location</h4>
+			<input class="edit-profile-input"type="text" id="edit-profile-row-location" name="location">
+		</div>
+		<div class="edit-profile-row">
+			<h4 class="edit-profile-row-label">Phone</h4>
+			<input class="edit-profile-input"type="text" id="edit-profile-row-phone" name="phone">
+		</div>
+		<div class="edit-profile-row">
+			<h4 class="edit-profile-row-label">About</h4>
+			<textarea class="edit-profile-input"type="text" id="edit-profile-row-about">
+		</div>
+		
 </div>
+ `
+
+ var changeWorkHTML = 
+ `
+ <div class="change-cont">
+	<div class="change-top">
+	<button id="add-work" class="change-button">Add</button>
+		<div class="new-exp">
+			<div id="new-work">
+				<div class="change-row">
+					<h4 class="edit-profile-row-label">Occupation</h4>
+					<input class="edit-profile-input"type="text" id="change-occupation" name="occupation">
+				</div>
+				<div class="change-row">
+					<h4 class="edit-profile-row-label">Date Start</h4>
+					<input class="edit-profile-input"type="number" id="change-date-start">
+				</div>
+				<div class="change-row">
+					<h4 class="edit-profile-row-label">Date End</h4>
+					<input class="edit-profile-input"type="number" id="change-date-end">
+				</div>
+				<div class="change-row">
+					<h4 class="edit-profile-row-label">About</h4>
+					<textarea type="text" id="change-about" rows="5" cols="45"></textarea>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="change-bot">
+		<button id="save-work-change" class="change-button">Save Changes</button>
+	</div>
+ </div>
  `
 
 var groupsListHTML = 
 `
 <div class="group-cont">
-	<button id="hamburger-group" onclick="openNavGroup()">Category</button>
-	<div class="group-left">
-	<button id="closebtnGroup" onclick="closeNavGroup()">&times;</button>
-		<div class="group-categorys">
-			<button id="Animals"	checked="no" class="category">Animals</button>
-			<button id="Birds" 		checked="no" class="category">Birds</button>
-			<button id="Chemicals" 	checked="no" class="category">Chemicals</button>
-			<button id="Equipment" 	checked="no" class="category">Equipment</button>
-			<button id="Fruit" 		checked="no" class="category">Fruit</button>
-			<button id="Plants" 	checked="no" class="category">Plants</button>
-			<button id="Seeds" 		checked="no" class="category">Seeds</button>
-			<button id="Vegetable" 	checked="no" class="category">Vegetable</button>
-			<button id="Technology" checked="no" class="category">Technology</button>
-		</div>	
-	</div>
-	<div class="group-right">
-		<div class="group-list">
-		</div>
+	<input id="group-search-name" "type="text" placeholder="Search">
+	<div class="group-list">
 	</div>
 </div>
 `	  

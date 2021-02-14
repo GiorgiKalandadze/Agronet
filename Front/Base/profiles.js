@@ -11,32 +11,9 @@ var profiles =
 		"location": "Hastings, UK",
 		"phone":"+44 7911 123456",
 		"img": "david.jpg",
-		"experience": 
-			[ 
-				{	"position" : "Agricultural Worker",
-					"dateStart" : "2015",
-					"dateEnd" : "Present",
-					"about" : "Ut a metus bibendum, venenatis ex non, bibendum ligula. Suspendisse convallis venenatis ultricies. Donec eu massa a lectus lacinia egestas. Curabitur a lacus sed sem convallis ultricies at eu orci."
-				},
-				{	"position" : "Agronomist",
-					"dateStart" : "2005",
-					"dateEnd" : "2012",
-					"about" : "Duis efficitur, neque at sagittis semper, turpis neque porttitor elit, quis luctus libero lectus eget mauris. In id efficitur velit. Donec enim metus, aliquam non eleifend sed, sodales ut ante." 
-				}
-			],
-		"education": 
-			[ 
-				{	"place" : "Agricultural University of London",
-					"dateStart" : "2007",
-					"dateEnd" : "2011",
-					"about" : "Etiam id nibh est. Vestibulum laoreet in quam ut maximus. Vivamus ultrices tellus id diam bibendum, nec pharetra nulla pulvinar"
-				},
-				{	"place" : "Royal College of Biology",
-					"dateStart" : "2002",
-					"dateEnd" : "2006",
-					"about" : "Curabitur quis eros lacinia, varius urna eu, finibus enim. In pellentesque tortor non nunc dictum, eu ornare massa euismod" 
-				}
-			],
+		"about":"Etiam vitae augue sapien. Sed pretium felis vel arcu tincidunt ultrices. Nulla nec elit ut felis gravida ornare vel eu turpis. Morbi euismod, urna sed euismod hendrerit, magna risus molestie est, in posuere eros magna rhoncus velit. In commodo aliquet eros ac placerat. Nunc egestas sapien vitae felis gravida dapibus. Aenean arcu felis, egestas quis urna sed, tristique condimentum justo. Suspendisse laoreet justo augue. Morbi tincidunt bibendum quam. Integer sapien tellus, laoreet in massa maximus, ultricies sollicitudin ligula. Nunc ut ipsum accumsan, maximus ante vel, fermentum augue. Duis porttitor sapien non tellus accumsan, vitae rhoncus urna blandit. Sed in aliquam ipsum. Cras fermentum velit non leo ornare, ut imperdiet sapien eleifend. Sed nisl dui, sodales commodo volutpat tristique, elementum quis felis. Aliquam id tincidunt arcu.",
+
+		
 	},
 	{	"username":"nino", 
 		"password": "nino123", 
@@ -48,27 +25,7 @@ var profiles =
 		"location": "Mestia, GEO",
 		"phone":"+995 577 965 451",
 		"img": "nino.jpg",
-		"experience": 
-			[ 
-				{	"position" : "Enviromental Engineer",
-					"dateStart" : "2010",
-					"dateEnd" : "2019",
-					"about" : "Fusce mi nibh, gravida quis luctus non, suscipit quis nunc. Donec lectus velit, ultricies eu bibendum nec, scelerisque sed lorem."
-				},
-			],
-		"education": 
-			[ 
-				{	"place" : "Technical University of Georgia",
-					"dateStart" : "2007",
-					"dateEnd" : "2009",
-					"about" : "Etiam id nibh est. Vestibulum laoreet in quam ut maximus. Vivamus ultrices tellus id diam bibendum, nec pharetra nulla pulvinar"
-				},
-				{	"place" : "Tbilisi State University",
-					"dateStart" : "2001",
-					"dateEnd" : "2005",
-					"about" : "Sed lacinia eros sed facilisis consectetur. Etiam pharetra erat at nunc porttitor, vel aliquet arcu accumsan." 
-				}
-			],
+		"about":"Etiam vitae augue sapien. Sed pretium felis vel arcu tincidunt ultrices. Nulla nec elit ut felis gravida ornare vel eu turpis. Morbi euismod, urna sed euismod hendrerit, magna risus molestie est, in posuere eros magna rhoncus velit. In commodo aliquet eros ac placerat. Nunc egestas sapien vitae felis gravida dapibus. Aenean arcu felis, egestas quis urna sed, tristique condimentum justo. Suspendisse laoreet justo augue. Morbi tincidunt bibendum quam. Integer sapien tellus, laoreet in massa maximus, ultricies sollicitudin ligula. Nunc ut ipsum accumsan, maximus ante vel, fermentum augue. Duis porttitor sapien non tellus accumsan, vitae rhoncus urna blandit. Sed in aliquam ipsum. Cras fermentum velit non leo ornare, ut imperdiet sapien eleifend. Sed nisl dui, sodales commodo volutpat tristique, elementum quis felis. Aliquam id tincidunt arcu.",
 	},
 	{	"username":"levani", 
 		"password": "levani123", 
@@ -80,23 +37,7 @@ var profiles =
 		"location": "Kvareli, GEO",
 		"phone":"+995 514 485 263",
 		"img": "levani.jpg",
-		"experience": 
-			[ 
-				{	"position" : "Beekeeper",
-					"dateStart" : "2013",
-					"dateEnd" : "Present",
-					"about" : "Ut a metus bibendum, venenatis ex non, bibendum ligula. Suspendisse convallis venenatis ultricies. Donec eu massa a lectus lacinia egestas. Curabitur a lacus sed sem convallis ultricies at eu orci."
-				},
-			],
-		"education": 
-			[ 
-				{	"place" : "Heidelberg Univeristy of Biology",
-					"dateStart" : "2008",
-					"dateEnd" : "2012",
-					"about" : "Etiam id nibh est. Vestibulum laoreet in quam ut maximus. Vivamus ultrices tellus id diam bibendum, nec pharetra nulla pulvinar"
-				},
-			
-			],
+		"about":"Vestibulum vestibulum, lectus id tincidunt fermentum, sapien ante scelerisque nisl, in imperdiet neque justo aliquam elit. Duis tempor interdum vestibulum. Nam rutrum efficitur viverra. Vestibulum lacus ligula, molestie eleifend luctus condimentum, aliquam eu mi. Donec commodo tellus in dictum rutrum. Aliquam erat volutpat. Proin ut tempus purus, vel lobortis quam. Praesent justo nunc, ultrices sit amet tristique vitae, fermentum ac enim. Maecenas gravida ligula nec lectus varius, vitae ornare augue lobortis. Morbi ornare eu purus eu sodales.Suspendisse aliquam augue at tellus accumsan, sit amet feugiat lorem sollicitudin. Sed bibendum risus ac viverra eleifend. Curabitur a ex eu nulla lacinia commodo. Mauris scelerisque, sem efficitur aliquet fringilla, neque tortor finibus nisl, in venenatis lorem nisi id velit. Aenean eleifend volutpat nulla, non interdum nulla sodales feugiat. Nullam vestibulum et orci in commodo. In eu ante ut dolor ullamcorper gravida. Donec feugiat pretium erat, a euismod lacus aliquam at. Nam imperdiet viverra varius. Aenean mattis dolor porta augue iaculis, id consequat ante ultricies. Duis suscipit, erat et convallis cursus, ligula orci volutpat tellus, ac rhoncus eros nulla vel enim. In ultricies sed augue malesuada ultricies.",
 	},
 	{	"username":"mariami", 
 		"password": "mariami123", 
@@ -108,32 +49,8 @@ var profiles =
 		"location": "Grigoleti, GEO",
 		"phone":"+995 593 223 748",
 		"img": "mariami.jpg",
-		"experience": 
-			[ 
-				{	"position" : "Plant Biologist",
-					"dateStart" : "2015",
-					"dateEnd" : "Present",
-					"about" : "Duis porta ipsum eu ante dignissim mollis. Nulla massa neque, laoreet ut auctor vitae, euismod eget ligula."
-				},
-				{	"position" : "Microbiologist",
-					"dateStart" : "2009",
-					"dateEnd" : "2014",
-					"about" : "Duis efficitur, neque at sagittis semper, turpis neque porttitor elit, quis luctus libero lectus eget mauris. In id efficitur velit. Donec enim metus, aliquam non eleifend sed, sodales ut ante." 
-				}
-			],
-		"education": 
-			[ 
-				{	"place" : "Tbilisi Agricultural University",
-					"dateStart" : "2006",
-					"dateEnd" : "2008",
-					"about" : "Etiam id nibh est. Vestibulum laoreet in quam ut maximus. Vivamus ultrices tellus id diam bibendum, nec pharetra nulla pulvinar"
-				},
-				{	"place" : "Batumi State University",
-					"dateStart" : "2001",
-					"dateEnd" : "2005",
-					"about" : "Curabitur quis eros lacinia, varius urna eu, finibus enim. In pellentesque tortor non nunc dictum, eu ornare massa euismod" 
-				}
-			],
+		"about":"Vestibulum vestibulum, lectus id tincidunt fermentum, sapien ante scelerisque nisl, in imperdiet neque justo aliquam elit. Duis tempor interdum vestibulum. Nam rutrum efficitur viverra. Vestibulum lacus ligula, molestie eleifend luctus condimentum, aliquam eu mi. Donec commodo tellus in dictum rutrum. Aliquam erat volutpat. Proin ut tempus purus, vel lobortis quam. Praesent justo nunc, ultrices sit amet tristique vitae, fermentum ac enim. Maecenas gravida ligula nec lectus varius, vitae ornare augue lobortis. Morbi ornare eu purus eu sodales.Suspendisse aliquam augue at tellus accumsan, sit amet feugiat lorem sollicitudin. Sed bibendum risus ac viverra eleifend. Curabitur a ex eu nulla lacinia commodo. Mauris scelerisque, sem efficitur aliquet fringilla, neque tortor finibus nisl, in venenatis lorem nisi id velit. Aenean eleifend volutpat nulla, non interdum nulla sodales feugiat. Nullam vestibulum et orci in commodo. In eu ante ut dolor ullamcorper gravida. Donec feugiat pretium erat, a euismod lacus aliquam at. Nam imperdiet viverra varius. Aenean mattis dolor porta augue iaculis, id consequat ante ultricies. Duis suscipit, erat et convallis cursus, ligula orci volutpat tellus, ac rhoncus eros nulla vel enim. In ultricies sed augue malesuada ultricies.",
+	
 
 	},
 	{	"username":"giorgi_k", 
@@ -146,18 +63,8 @@ var profiles =
 		"location": "Dresden, GER",
 		"phone":"+49 30 901820",
 		"img": "giorgi_k.jpg",
-		"experience": 
-			[ 
-				{	"position" : "Farmer",
-					"dateStart" : "2005",
-					"dateEnd" : "Present",
-					"about" : "Ut a metus bibendum, venenatis ex non, bibendum ligula. Suspendisse convallis venenatis ultricies. Donec eu massa a lectus lacinia egestas. Curabitur a lacus sed sem convallis ultricies at eu orci."
-				},
-			
-			],
-		"education": 
-			[ 
-			],
+		"about":"Vestibulum vestibulum, lectus id tincidunt fermentum, sapien ante scelerisque nisl, in imperdiet neque justo aliquam elit. Duis tempor interdum vestibulum. Nam rutrum efficitur viverra. Vestibulum lacus ligula, molestie eleifend luctus condimentum, aliquam eu mi. Donec commodo tellus in dictum rutrum. Aliquam erat volutpat. Proin ut tempus purus, vel lobortis quam. Praesent justo nunc, ultrices sit amet tristique vitae, fermentum ac enim. Maecenas gravida ligula nec lectus varius, vitae ornare augue lobortis. Morbi ornare eu purus eu sodales.Suspendisse aliquam augue at tellus accumsan, sit amet feugiat lorem sollicitudin. Sed bibendum risus ac viverra eleifend. Curabitur a ex eu nulla lacinia commodo. Mauris scelerisque, sem efficitur aliquet fringilla, neque tortor finibus nisl, in venenatis lorem nisi id velit. Aenean eleifend volutpat nulla, non interdum nulla sodales feugiat. Nullam vestibulum et orci in commodo. In eu ante ut dolor ullamcorper gravida. Donec feugiat pretium erat, a euismod lacus aliquam at. Nam imperdiet viverra varius. Aenean mattis dolor porta augue iaculis, id consequat ante ultricies. Duis suscipit, erat et convallis cursus, ligula orci volutpat tellus, ac rhoncus eros nulla vel enim. In ultricies sed augue malesuada ultricies.",
+	
 	},
 	{	"username":"james", 
 		"password": "james123", 
@@ -169,22 +76,8 @@ var profiles =
 		"location": "Seattle, USA",
 		"phone":"+1 541 754 3010",
 		"img": "james.jpg",
-		"experience": 
-			[ 
-				{	"position" : "BeeKeeper",
-					"dateStart" : "2010",
-					"dateEnd" : "Present",
-					"about" : "Ut a metus bibendum, venenatis ex non, bibendum ligula. Suspendisse convallis venenatis ultricies. Donec eu massa a lectus lacinia egestas. Curabitur a lacus sed sem convallis ultricies at eu orci."
-				},
-			],
-		"education": 
-			[ 
-				{	"place" : "Agricultural University of Budapest",
-					"dateStart" : "2007",
-					"dateEnd" : "2011",
-					"about" : "Etiam id nibh est. Vestibulum laoreet in quam ut maximus. Vivamus ultrices tellus id diam bibendum, nec pharetra nulla pulvinar"
-				},
-			],
+		"about":"Vestibulum vestibulum, lectus id tincidunt fermentum, sapien ante scelerisque nisl, in imperdiet neque justo aliquam elit. Duis tempor interdum vestibulum. Nam rutrum efficitur viverra. Vestibulum lacus ligula, molestie eleifend luctus condimentum, aliquam eu mi. Donec commodo tellus in dictum rutrum. Aliquam erat volutpat. Proin ut tempus purus, vel lobortis quam. Praesent justo nunc, ultrices sit amet tristique vitae, fermentum ac enim. Maecenas gravida ligula nec lectus varius, vitae ornare augue lobortis. Morbi ornare eu purus eu sodales.Suspendisse aliquam augue at tellus accumsan, sit amet feugiat lorem sollicitudin. Sed bibendum risus ac viverra eleifend. Curabitur a ex eu nulla lacinia commodo. Mauris scelerisque, sem efficitur aliquet fringilla, neque tortor finibus nisl, in venenatis lorem nisi id velit. Aenean eleifend volutpat nulla, non interdum nulla sodales feugiat. Nullam vestibulum et orci in commodo. In eu ante ut dolor ullamcorper gravida. Donec feugiat pretium erat, a euismod lacus aliquam at. Nam imperdiet viverra varius. Aenean mattis dolor porta augue iaculis, id consequat ante ultricies. Duis suscipit, erat et convallis cursus, ligula orci volutpat tellus, ac rhoncus eros nulla vel enim. In ultricies sed augue malesuada ultricies.",
+	
 	},
 	{	"username":"mary", 
 		"password": "mary123", 
@@ -196,32 +89,8 @@ var profiles =
 		"location": "Glasgow, UK",
 		"phone":"+44 7412 5323456",
 		"img": "mary.jpg",
-		"experience": 
-			[ 
-				{	"position" : "Agricultural Worker",
-					"dateStart" : "2015",
-					"dateEnd" : "Present",
-					"about" : "Ut a metus bibendum, venenatis ex non, bibendum ligula. Suspendisse convallis venenatis ultricies. Donec eu massa a lectus lacinia egestas. Curabitur a lacus sed sem convallis ultricies at eu orci."
-				},
-				{	"position" : "Agronomist",
-					"dateStart" : "2005",
-					"dateEnd" : "2012",
-					"about" : "Duis efficitur, neque at sagittis semper, turpis neque porttitor elit, quis luctus libero lectus eget mauris. In id efficitur velit. Donec enim metus, aliquam non eleifend sed, sodales ut ante." 
-				}
-			],
-		"education": 
-			[ 
-				{	"place" : "Agricultural University of London",
-					"dateStart" : "2007",
-					"dateEnd" : "2011",
-					"about" : "Etiam id nibh est. Vestibulum laoreet in quam ut maximus. Vivamus ultrices tellus id diam bibendum, nec pharetra nulla pulvinar"
-				},
-				{	"place" : "Royal College of Biology",
-					"dateStart" : "2002",
-					"dateEnd" : "2006",
-					"about" : "Curabitur quis eros lacinia, varius urna eu, finibus enim. In pellentesque tortor non nunc dictum, eu ornare massa euismod" 
-				}
-			],
+		"about":"Vestibulum vestibulum, lectus id tincidunt fermentum, sapien ante scelerisque nisl, in imperdiet neque justo aliquam elit. Duis tempor interdum vestibulum. Nam rutrum efficitur viverra. Vestibulum lacus ligula, molestie eleifend luctus condimentum, aliquam eu mi. Donec commodo tellus in dictum rutrum. Aliquam erat volutpat. Proin ut tempus purus, vel lobortis quam. Praesent justo nunc, ultrices sit amet tristique vitae, fermentum ac enim. Maecenas gravida ligula nec lectus varius, vitae ornare augue lobortis. Morbi ornare eu purus eu sodales.Suspendisse aliquam augue at tellus accumsan, sit amet feugiat lorem sollicitudin. Sed bibendum risus ac viverra eleifend. Curabitur a ex eu nulla lacinia commodo. Mauris scelerisque, sem efficitur aliquet fringilla, neque tortor finibus nisl, in venenatis lorem nisi id velit. Aenean eleifend volutpat nulla, non interdum nulla sodales feugiat. Nullam vestibulum et orci in commodo. In eu ante ut dolor ullamcorper gravida. Donec feugiat pretium erat, a euismod lacus aliquam at. Nam imperdiet viverra varius. Aenean mattis dolor porta augue iaculis, id consequat ante ultricies. Duis suscipit, erat et convallis cursus, ligula orci volutpat tellus, ac rhoncus eros nulla vel enim. In ultricies sed augue malesuada ultricies.",
+	
 	},
 	{	"username":"maria", 
 		"password": "maria123", 
@@ -233,31 +102,7 @@ var profiles =
 		"location": "Bilbao, SPA",
 		"phone":"+34910601017",
 		"img": "maria.jpg",
-		"experience": 
-			[ 
-				{	"position" : "Agricultural Worker",
-					"dateStart" : "2015",
-					"dateEnd" : "Present",
-					"about" : "Ut a metus bibendum, venenatis ex non, bibendum ligula. Suspendisse convallis venenatis ultricies. Donec eu massa a lectus lacinia egestas. Curabitur a lacus sed sem convallis ultricies at eu orci."
-				},
-				{	"position" : "Agronomist",
-					"dateStart" : "2005",
-					"dateEnd" : "2012",
-					"about" : "Duis efficitur, neque at sagittis semper, turpis neque porttitor elit, quis luctus libero lectus eget mauris. In id efficitur velit. Donec enim metus, aliquam non eleifend sed, sodales ut ante." 
-				}
-			],
-		"education": 
-			[ 
-				{	"place" : "Agricultural University of London",
-					"dateStart" : "2007",
-					"dateEnd" : "2011",
-					"about" : "Etiam id nibh est. Vestibulum laoreet in quam ut maximus. Vivamus ultrices tellus id diam bibendum, nec pharetra nulla pulvinar"
-				},
-				{	"place" : "Royal College of Biology",
-					"dateStart" : "2002",
-					"dateEnd" : "2006",
-					"about" : "Curabitur quis eros lacinia, varius urna eu, finibus enim. In pellentesque tortor non nunc dictum, eu ornare massa euismod" 
-				}
-			],
+		"about":"Vestibulum vestibulum, lectus id tincidunt fermentum, sapien ante scelerisque nisl, in imperdiet neque justo aliquam elit. Duis tempor interdum vestibulum. Nam rutrum efficitur viverra. Vestibulum lacus ligula, molestie eleifend luctus condimentum, aliquam eu mi. Donec commodo tellus in dictum rutrum. Aliquam erat volutpat. Proin ut tempus purus, vel lobortis quam. Praesent justo nunc, ultrices sit amet tristique vitae, fermentum ac enim. Maecenas gravida ligula nec lectus varius, vitae ornare augue lobortis. Morbi ornare eu purus eu sodales.Suspendisse aliquam augue at tellus accumsan, sit amet feugiat lorem sollicitudin. Sed bibendum risus ac viverra eleifend. Curabitur a ex eu nulla lacinia commodo. Mauris scelerisque, sem efficitur aliquet fringilla, neque tortor finibus nisl, in venenatis lorem nisi id velit. Aenean eleifend volutpat nulla, non interdum nulla sodales feugiat. Nullam vestibulum et orci in commodo. In eu ante ut dolor ullamcorper gravida. Donec feugiat pretium erat, a euismod lacus aliquam at. Nam imperdiet viverra varius. Aenean mattis dolor porta augue iaculis, id consequat ante ultricies. Duis suscipit, erat et convallis cursus, ligula orci volutpat tellus, ac rhoncus eros nulla vel enim. In ultricies sed augue malesuada ultricies.",
+	
 	}
 ]

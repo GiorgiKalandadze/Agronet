@@ -67,6 +67,9 @@ function loadPosts(){
 
 function loadNews(){
 	for(i = 0; i < news.length; i++){
+		var a = document.createElement("a");
+		a.href = news[i].link;
+		a.target = "_blank";
 		var div = document.createElement("div");
 		div.className = "news";
 		var img = document.createElement("img");
@@ -78,6 +81,7 @@ function loadNews(){
 		p.innerHTML = news[i].text;
 		div.appendChild(img);
 		div.appendChild(p);
-		document.getElementById("main-feed-left").appendChild(div);
+		a.appendChild(div);
+		document.getElementById("main-feed-left").appendChild(a);
 	}
 }

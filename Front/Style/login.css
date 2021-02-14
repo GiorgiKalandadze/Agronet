@@ -109,7 +109,13 @@ body{
 .btn:hover{
 	opacity: 1;
 }
-
+@media screen and (max-width: 850px) {
+	.login-container{
+		
+		padding-right: 40px;
+		width: 100%;
+	}
+}
 @media screen and (max-width: 770px) {
 	#loginBackImg{
 		display: none;
