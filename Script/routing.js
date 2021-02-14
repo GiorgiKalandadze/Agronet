@@ -94,6 +94,7 @@ router.on({
 		loadGroups();
 	},
 	'/Groups/:id/': function (args) {
+		document.getElementsByClassName('main-content')[0].innerHTML = groupsListHTML;
 		document.getElementsByClassName('group-cont')[0].innerHTML = groupinHTML;
 		if(logged == false){
 			document.getElementById("new-post-group").style.display = "none";
@@ -128,6 +129,8 @@ router.on({
     '/Items': function (args) {
         document.getElementsByClassName('main-content')[0].innerHTML = tradeHTML;
 		loadCategoryItems(1);
+	},
+	'/Items/:id/': function (args) {
 	},
     '/About': function (args) {
 		document.getElementsByClassName('main-content')[0].innerHTML = aboutHTML;

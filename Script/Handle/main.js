@@ -7,8 +7,8 @@ document.addEventListener("click", function(e){
 	// }
 	if(e.target.id == "new-post-button"){
 		var text = document.getElementById("new-post-text").value;
-		
-		var newPost = {"id":posts.length + 1, "author_id":loggedID, "date":"17 Feb",
+		var d = new Date();
+		var newPost = {"id":posts.length + 1, "author_id":loggedID, "date":d.getDate() + "." + d.getMonth(),
 						"text":text};
 		console.log(loggedID);
 		posts.push(newPost);

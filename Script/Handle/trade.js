@@ -12,6 +12,7 @@ document.addEventListener('click', function (e){
 	if(e.target.className == 'item-img'){
 		document.getElementsByClassName('trade-right')[0].innerHTML = itemInHTML;
 		loadItemIn(e);
+		router.navigate('/Items/' + e.target.id);
 	}
 	if(e.target.id == 'trade-in-back'){
 		document.getElementsByClassName('trade-right')[0].innerHTML = '';

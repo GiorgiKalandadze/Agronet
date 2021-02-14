@@ -4,7 +4,7 @@ body{
 }
 .trade-cont {
 	width: 100%;
-	border: 3px solid fuchsia;
+	/* border: 3px solid fuchsia; */
 	margin-top: 10px;
 	display: flex;
 	justify-content: flex-start;
@@ -18,7 +18,7 @@ body{
 	background-color: red;
 }
 .trade-left{	
-	border: 3px solid red;
+	/* border: 3px solid red; */
 	/*width: 200px;*/
 	width: 20%;
 	height: 100%;

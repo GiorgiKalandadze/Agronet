@@ -27,14 +27,17 @@
 	width: auto;
 	height: 100px;
 }
+.linker{
+	cursor: pointer;
+}
 @media screen and (max-width: 770px) {
 	.footerContainer{
-		border: 1px solid black;
+		/* border: 1px solid black; */
 		width: 100%;
 
 	}
 	.footerFirstRow{
-		border: 1px solid red;
+		/* border: 1px solid red; */
 		width: 100%;
 		flex-direction: column;
 	}

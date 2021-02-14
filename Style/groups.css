@@ -94,11 +94,11 @@ body{
 	overflow-y: scroll;
 	height: 680px;
 	width: 100%;
-	border: 3px solid red;
+	/* border: 3px solid red; */
 	background-color: #637a94;
 }
 .group-info{
-	border: 3px solid blue;
+	/* border: 3px solid blue; */
 }
 #group-description{
 	
@@ -149,7 +149,7 @@ body{
 	/*border: 1px solid red;*/
 	margin: auto;
 	width: 600px;
-	border: 3px solid green;
+	/* border: 3px solid green; */
 }
 #new-post-text-group{
 	border: none;
@@ -162,7 +162,7 @@ body{
 	flex-direction: column;
 }
 .group-posts{
-	border: 3px solid black;
+	/* border: 3px solid black; */
 }
 .postButton{
 	outline: none;

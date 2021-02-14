@@ -166,28 +166,28 @@ hr{
 
 .change-cont{
 	padding: 10px;
-	border: 2px solid red;
+	/* border: 2px solid red; */
 }
 .change-top{
-	border: 2px solid blue;
+	/* border: 2px solid blue; */
 	margin-bottom: 10px;
 }
 .new-exp{
 	
-	border: 2px solid red;
+	/* border: 2px solid red; */
 }
 #new-work{
-	border: 2px solid blue;
+	/* border: 2px solid blue; */
 }
 
 .change-bot{
-	border: 2px solid black;
+	/* border: 2px solid black; */
 }
 .work-cont{
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
-	border: 2px solid yellow;
+	/* border: 2px solid yellow; */
 	margin-bottom: 3px;
 }
 

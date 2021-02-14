@@ -192,7 +192,6 @@ var loginHTML =
 					<input class="input" id="password-input" name="password" type="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'">
 				</div>
 			</div>	
-			<a id="forgot"href="#">Forgot Password?</a>
 			<input type="submit" id="loginFormButton" value="Login">
 
 		</div>
@@ -272,7 +271,7 @@ var itemInHTML =
 		<img class="item-in-back-img" src="">
 	</div>
 	<div class="item-in-right">
-		<button id="trade-in-back">Back</button>
+
 		<div class="item-in-data">
 			<div class="item-in-attribute">
 				<label>Name:</label>
@@ -317,13 +316,6 @@ var profileHTML =
           			<i class="fas fa-phone-alt"></i>
           			<label id="profile-phone"></label>
         		</p>
-				<div class="social-icons">
-					<i class="social fab fa-twitter"></i>
-					<i class="social fab fa-facebook"></i>
-					<i class="social fab fa-instagram"></i>
-					<i class="social fab fa-google"></i>
-					<i class="social fab fa-linkedin"></i>
-				</div>
       		</div>
       		<div class="profile-left-buttons">
 				<button id="edit-profile" class="profile-left-button">Edit Profile</button>
@@ -628,4 +620,3 @@ var privacyHTML =
 `
 
 ////////////////////////////////////////////////////////////////////////////////////////
-window.history.pushState(indexHTML, "Index Page", "");
