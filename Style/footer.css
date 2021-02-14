@@ -32,22 +32,14 @@
 }
 @media screen and (max-width: 770px) {
 	.footerContainer{
-		/* border: 1px solid black; */
 		width: 100%;
 
 	}
 	.footerFirstRow{
-		/* border: 1px solid red; */
 		width: 100%;
 		flex-direction: column;
 	}
-	.column.First{
-		/*border: 1px solid blue;*/
-	}
-	.footerSecondRow{
-		/* width: 100%; */
-		
-	}
+
 	.footer-logo{
 		
 		margin-bottom: 5px;
@@ -65,5 +57,8 @@
 @media screen and (max-width: 400px) {
 	.footer-logo{
 		width: 90%;
+	}
+	.footer-li{
+		font-size: 0.8em;
 	}
 }

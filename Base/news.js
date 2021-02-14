@@ -29,14 +29,5 @@ var news =
 			At least 200,000 ducks culled in France amid bird flu outbreak.
 		`,
 	},
-	// {
-	// 	"id":4,
-	// 	"img":"news4.jpg",
-	// 	"text":
-	// 	`
-	// 		Growers participating in TruCarbon, the new carbon storage program from Land O’Lakes Truterra, 
-	// 		could receive $20 per ton of carbon in 2021.
-	// 	`,
-	// },
 
 ]

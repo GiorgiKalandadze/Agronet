@@ -142,17 +142,6 @@ router.on({
         document.getElementsByClassName('main-content')[0].innerHTML = privacyHTML;
         window.scrollTo(0,0);
 	},
-
-
-
-
-	// '*': function () {
-	// 	console.log('home');
-	// },
-	// '/stock/:id/': function (params) {
-	// 	handleStock(params.id);
-	// 	console.log(params.id)
-	// }
 }).resolve();
 
 //router.navigate('/stock/' + id);

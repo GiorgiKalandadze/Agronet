@@ -97,20 +97,6 @@ function loadCategoryItems(index){
 
 
 
-
-
-
-
-// var slider = document.getElementById("price-ranger");
-// var output = document.getElementById("price-value");
-// output.innerHTML = slider.value; // Display the default slider value
-// // Update the current slider value (each time you drag the slider handle)
-// slider.oninput = function() {
-//   output.innerHTML = document.getElementById("price-ranger").value;
-// }
-
-
-
 function loadItemIn(e){
 	var id = e.target.id;
 	var categoryId = e.target.getAttribute("categoryId");
@@ -126,50 +112,3 @@ function loadItemIn(e){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//Vip slider ///////////////////////////////////////////////////////////////////////
-document.addEventListener('click', function (e){
-	
-	if(e.target.className == 'vip-slide'){
-		if(e.target.id == 'next'){
-			vipCounter += 1;
-		} else {
-			vipCounter -= 1;
-		}
-		changeSlide(vipCounter);
-	}
-	if(e.target.className == 'vip-img'){
-		document.getElementsByClassName('main-content')[0].innerHTML = tradeHTML;
-		loadItems();
-		document.getElementsByClassName('trade-right')[0].innerHTML = itemInHTML;
-		loadItemIn(e);
-
-	}
-});
-var vipCounter = 0;
-function changeSlide(counter){
-	if(counter < 0){
-		counter = items.length + counter;
-	}
-	if(counter >= items.length){
-		counter = counter % items.length;
-	}
-
-	var slides = document.getElementsByClassName('vip-img');
-	slides[0].src = items[counter].img;
-	slides[1].src = items[(counter + 1) % items.length].img;
-	slides[2].src = items[(counter + 2) % items.length].img;
-	slides[3].src = items[(counter + 3) % items.length].img;
-}

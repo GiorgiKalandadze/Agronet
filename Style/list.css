@@ -36,7 +36,6 @@ body{
 	margin: 10px;
 	margin-left: auto;
 	margin-right: auto;
-	/* border: 3px solid blue; */
 	cursor: pointer;
 }
 
@@ -50,24 +49,18 @@ body{
 	margin-bottom: 5px;
 	color : black;
 }
-
 .info:hover {
-	
 	transform: scale(1.05);
 }
 
-
 .input-row {
 	width: 100%;
-	
 	display:flex;
 	justify-content: flex-start;
 }
 
-
 .inp {
 	width: 100%;
-	
 	display: none;
 }
 

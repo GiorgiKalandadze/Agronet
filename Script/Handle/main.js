@@ -1,10 +1,5 @@
 document.addEventListener("click", function(e){
-	// if(e.target.id == "like-button"){
-	// 	var button = document.getElementById("like-button");
-	// 	console.log(button.getAttribute("checked"));
-		
-	// 	//e.target.style.backgroundColor = "red";
-	// }
+
 	if(e.target.id == "new-post-button"){
 		var text = document.getElementById("new-post-text").value;
 		var d = new Date();

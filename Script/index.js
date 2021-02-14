@@ -372,37 +372,8 @@ var editProfileHTML =
 </div>
  `
 
- var changeWorkHTML = 
- `
- <div class="change-cont">
-	<div class="change-top">
-	<button id="add-work" class="change-button">Add</button>
-		<div class="new-exp">
-			<div id="new-work">
-				<div class="change-row">
-					<h4 class="edit-profile-row-label">Occupation</h4>
-					<input class="edit-profile-input"type="text" id="change-occupation" name="occupation">
-				</div>
-				<div class="change-row">
-					<h4 class="edit-profile-row-label">Date Start</h4>
-					<input class="edit-profile-input"type="number" id="change-date-start">
-				</div>
-				<div class="change-row">
-					<h4 class="edit-profile-row-label">Date End</h4>
-					<input class="edit-profile-input"type="number" id="change-date-end">
-				</div>
-				<div class="change-row">
-					<h4 class="edit-profile-row-label">About</h4>
-					<textarea type="text" id="change-about" rows="5" cols="45"></textarea>
-				</div>
-			</div>
-		</div>	
-	</div>
-	<div class="change-bot">
-		<button id="save-work-change" class="change-button">Save Changes</button>
-	</div>
- </div>
- `
+ 
+ 
 
 var groupsListHTML = 
 `

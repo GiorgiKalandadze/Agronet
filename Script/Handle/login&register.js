@@ -87,7 +87,6 @@ function checkUserLogin(){
 			}
 		}
 	}
-	//.log('Finished - Checking User Login - Invalid');
 	return false;
 }
 
