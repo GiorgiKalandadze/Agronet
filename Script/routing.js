@@ -35,7 +35,6 @@ router.on({
 	},
 	'/Profile/Edit/:id/': function (args) {
         document.getElementById('right-box').innerHTML = editProfileHTML;
-		console.log(loggedID);
 		user = profiles[loggedID];
 		document.getElementById('edit-profile-row-password').value = user.password;
 		document.getElementById('edit-profile-row-email').value = user.email;
@@ -47,7 +46,6 @@ router.on({
 		document.getElementById('edit-profile-row-about').value = user.about;
 	},
 	'/Profile/Work/:id/': function (args) {
-        console.log('Work');
 		var profile = profiles[args.id];
 		var works = profile.experience;
 		document.getElementById('right-box').innerHTML = changeWorkHTML;
@@ -83,7 +81,6 @@ router.on({
 
 	},
 	'/Profile/Education/:id/': function (args) {
-        console.log('Education');
 		var profile = profiles[args.id];
 		var works = profile.experience;
 		document.getElementById('right-box').innerHTML = "";

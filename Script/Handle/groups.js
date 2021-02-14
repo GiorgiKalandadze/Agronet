@@ -92,7 +92,6 @@ document.addEventListener('keyup', function(e){
 
 //On page people filters people
 function filterGroups(searchValue1){
-	console.log('DD');
 	var divs = document.getElementsByClassName('group');
 	for(i=0; i < divs.length; i++){
 		var currDiv = divs[i];

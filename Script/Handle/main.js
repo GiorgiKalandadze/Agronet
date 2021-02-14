@@ -5,7 +5,6 @@ document.addEventListener("click", function(e){
 		var d = new Date();
 		var newPost = {"id":posts.length + 1, "author_id":loggedID, "date":d.getDate() + "." + d.getMonth(),
 						"text":text};
-		console.log(loggedID);
 		posts.push(newPost);
 		document.getElementsByClassName("containerPost")[0].innerHTML = "";
 		document.getElementById("new-post-text").value = "";
